@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" strict="true"
+               name="api-test-logger-config"
+               packages="com.bodybuilding.automation.cmsappapi">
+
+    <Appenders>
+        <Appender type="Console" name="STDOUT" target="SYSTEM_OUT">
+            <Layout type="PatternLayout">
+                <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Pattern>
+                <!--{{time}} [{{thread}}] {{left-aligned-level}} {{classname}} - {{message}} {{line-break}}-->
+            </Layout>
+        </Appender>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
