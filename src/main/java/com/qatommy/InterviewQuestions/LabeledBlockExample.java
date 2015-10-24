@@ -2,6 +2,10 @@ package com.qatommy.InterviewQuestions;
 
 import java.util.Arrays;
 
+/**
+ * What's the performance penalty for using a labeled block, versus framing something
+ * with a function call or other control structure instead?
+ */
 public class LabeledBlockExample {
 	private static final int ITERATIONS = new Double(Math.pow(2.0, 20.0)).intValue();
 	//they're all even numbers, except the very last one!  yay!
