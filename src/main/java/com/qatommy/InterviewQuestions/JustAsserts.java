@@ -1,14 +1,10 @@
 package com.qatommy.InterviewQuestions;
 
 /**
- * There was a case I encountered where an assert gave me the
- * wrong answer.
- *
- * So I learned, an assert will take a boolean, but will not
- * change the world to derive a boolean.
- *
- * In this example, you can call a method to get a value,
- * but you cannot make an API call inside an assert for instance.
+ * I once saw a plain old java "assert" operator call fail to behave the way I expected.
+ * I later learned the reason is that the assert operator will only do a comparison to true,
+ * not modify the world using any function inside the assert call.
+ * In short, assert operations have no side-effects.
  */
 public class JustAsserts {
 	public static void main(String[] args) {

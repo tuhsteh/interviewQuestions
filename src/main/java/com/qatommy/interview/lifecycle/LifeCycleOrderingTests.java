@@ -10,6 +10,11 @@ import org.junit.runner.Description;
 
 import static org.junit.Assert.assertTrue;
 
+/**
+ * I built this to better illustrate the lifecycle of all the setup and teardown options available
+ * through annotations in JUnit, through class construction in Java, and through static members
+ * in java class definitions.  My main concern is the order in which things happen.
+ */ 
 public class LifeCycleOrderingTests {
 
     public LifeCycleOrderingTests() {

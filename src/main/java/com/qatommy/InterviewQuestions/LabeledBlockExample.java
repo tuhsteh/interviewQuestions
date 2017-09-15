@@ -3,8 +3,8 @@ package com.qatommy.InterviewQuestions;
 import java.util.Arrays;
 
 /**
- * One day, I learned about labeled blocks, and I just wondered
- * if there's a serious reason to not use them, besides 
+ * What's the performance penalty for using a labeled block, versus framing something
+ * with a function call or other control structure instead?
  */
 public class LabeledBlockExample {
 	private static final int ITERATIONS = new Double(Math.pow(2.0, 20.0)).intValue();
