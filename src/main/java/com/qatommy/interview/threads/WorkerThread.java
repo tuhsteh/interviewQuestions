@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 public class WorkerThread extends Thread {
     public static final Logger logger = LogManager.getLogger(WorkerThread.class.getSimpleName());
+    private static final int THREAD_LIFE = 2000; //milliseconds
 
     private final String command;
 
@@ -12,16 +13,27 @@ public class WorkerThread extends Thread {
         this.command = s;
     }
 
-    @Override
-    public void run() {
-        logger.info("Start. Command = " + command);
-        processCommand();
-        logger.info("End.");
+    /**
+     * Includes the thread name in the log statement.
+     * @param message   The message to log.
+     */
+    private void log (String message) {
+        logger.info(String.format("[%s] %s", toString(), message));
     }
 
+    @Override
+    public void run() {
+        log("Start. Command = " + command);
+        processCommand();
+        log("End.");
+    }
+
+    /**
+     * This is simply something to do that takes time.
+     */
     private void processCommand() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(THREAD_LIFE);
         } catch (InterruptedException e) {
             logger.error(e.getClass().getSimpleName());
         }
