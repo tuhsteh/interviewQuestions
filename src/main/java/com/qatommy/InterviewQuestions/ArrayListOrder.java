@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Does a for-each type of loop on an array list go
+ * in the same order of the elements in the list as
+ * you would find from a numeric-indexing based
+ * processing of the list?
+ */
 public class ArrayListOrder {
 	final static Random r = new Random(System.currentTimeMillis());
 

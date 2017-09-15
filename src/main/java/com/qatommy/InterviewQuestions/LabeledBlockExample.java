@@ -2,6 +2,10 @@ package com.qatommy.InterviewQuestions;
 
 import java.util.Arrays;
 
+/**
+ * One day, I learned about labeled blocks, and I just wondered
+ * if there's a serious reason to not use them, besides 
+ */
 public class LabeledBlockExample {
 	private static final int ITERATIONS = new Double(Math.pow(2.0, 20.0)).intValue();
 	//they're all even numbers, except the very last one!  yay!
@@ -527,13 +531,13 @@ public class LabeledBlockExample {
 		//static block.  For several hundred iterations, scan a list of 500 numbers looking for the first prime.
 		long startBlockTime = System.currentTimeMillis();
 		for (int j = 0; j < ITERATIONS; j++) {
-			int thePrime = 0;
-			findThePrime:
+			int theOdd = 0;
+			findTheOdd:
 			{
 				for (int i : someNumbers) {
 					if (i % 2 != 0) {
-						thePrime = i;
-						break findThePrime;
+						theOdd = i;
+						break findTheOdd;
 					}
 				}
 			}
@@ -543,9 +547,9 @@ public class LabeledBlockExample {
 
 		//method call.  For several hundred iterations, call a method that will scan a list of 500 numbers looking for the first prime.
 		long startMethodTime = System.currentTimeMillis();
-		int thePrime = 0;
+		int theOdd = 0;
 		for (int j = 0; j < ITERATIONS; j++) {
-			thePrime = findThePrime();
+			theOdd = findThePrime();
 		}
 		long endMethodTime = System.currentTimeMillis();
 
