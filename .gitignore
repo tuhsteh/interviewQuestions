@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/java,maven,cypressio,macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=java,maven,cypressio,macos
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos,java,maven,cypressio
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos,java,maven,cypressio
 
 ### CypressIO ###
 # gitignore template for the CypressIO, browser test framework
@@ -88,4 +88,23 @@ buildNumber.properties
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 
-# End of https://www.toptal.com/developers/gitignore/api/java,maven,cypressio,macos
+### VisualStudioCode ###
+.vscode/*
+.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos,java,maven,cypressio

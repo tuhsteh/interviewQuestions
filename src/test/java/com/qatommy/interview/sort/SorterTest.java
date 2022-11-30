@@ -44,7 +44,7 @@ public class SorterTest {
         Collections.shuffle(returnValue);
         end = System.currentTimeMillis();
         System.out.println(String.format("Shuffling that list took %,d milliseconds.", (end - start)));
-        return (Integer[]) returnValue.toArray();
+        return returnValue.toArray(new Integer[returnValue.size()]);
     }
 
     List<? extends Sorter> sorters = Arrays.asList(
