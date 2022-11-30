@@ -7,6 +7,6 @@ describe('Reverse a string.', () => {
         cy.log(`Original words:  [${origin}]`)
         var splitSentence = origin.split("");
         var revSentence = splitSentence.reverse().join("");
-        cy.log(`Reversed word:  [${revSentence}]`);
+        cy.log(`Reversed words:  [${revSentence}]`);
     });
 });

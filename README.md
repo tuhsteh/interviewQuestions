@@ -12,3 +12,20 @@ Some of the problems still aren't completely clear to me, like how some of the s
 
 Also in this repository are some experiments I put together, or some algorithm comparisons I wanted to try out.  
 
+## Now with Cypress.io
+
+Also included here are a handful of tests that operate in Cypress framework for JavaScript-based web app testing.
+
+Install dependencies first for your platform:
+
+`yarn install`
+
+Then run tests:
+
+`yarn cypress open`
+
+or 
+
+`yarn cypress run`
+
+

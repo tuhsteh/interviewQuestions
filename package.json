@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "casual-browserify": "^1.5.19-2",
+    "cypress": "9.7.0"
+  },
+  "name": "interviewquestions",
+  "description": "Contains programming solutions to a variety of interview questions, as well as some experiments.",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuhsteh/interviewQuestions.git"
+  },
+  "author": "tom.stear",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tuhsteh/interviewQuestions/issues"
+  },
+  "homepage": "https://github.com/tuhsteh/interviewQuestions#readme"
+}
