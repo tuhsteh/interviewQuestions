@@ -531,12 +531,10 @@ public class LabeledBlockExample {
 		//static block.  For several hundred iterations, scan a list of 500 numbers looking for the first prime.
 		long startBlockTime = System.currentTimeMillis();
 		for (int j = 0; j < ITERATIONS; j++) {
-			int theOdd = 0;
 			findTheOdd:
 			{
 				for (int i : someNumbers) {
 					if (i % 2 != 0) {
-						theOdd = i;
 						break findTheOdd;
 					}
 				}
@@ -547,9 +545,8 @@ public class LabeledBlockExample {
 
 		//method call.  For several hundred iterations, call a method that will scan a list of 500 numbers looking for the first prime.
 		long startMethodTime = System.currentTimeMillis();
-		int theOdd = 0;
 		for (int j = 0; j < ITERATIONS; j++) {
-			theOdd = findThePrime();
+			findThePrime();
 		}
 		long endMethodTime = System.currentTimeMillis();
 

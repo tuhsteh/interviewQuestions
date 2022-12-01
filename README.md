@@ -12,6 +12,12 @@ Some of the problems still aren't completely clear to me, like how some of the s
 
 Also in this repository are some experiments I put together, or some algorithm comparisons I wanted to try out.  
 
+## Java Tests
+
+This is a Maven project, so a recent release of Maven3, along with JDK 8 if you can still get it, will be all you need to get things running.
+
+`mvn clean install`
+
 ## Now with Cypress.io
 
 Also included here are a handful of tests that operate in Cypress framework for JavaScript-based web app testing.

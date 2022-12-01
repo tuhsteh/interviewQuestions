@@ -6,13 +6,13 @@ import java.util.List;
 
 public class BogoSort extends Sorter {
     @Override
-    public void sort(Comparable[] listToSort) {
+    public void sort(Comparable<Integer>[] listToSort) {
         if (listToSort.length > 10) {
             System.out.println("You'd better not sort anything this big with a bogo sort.  Who knows when it will finish!?");
             Sorter s = new HeapSort();
             s.sort(listToSort);
         } else {
-            Comparable[] temp = new Comparable[listToSort.length];
+            Comparable<Integer>[] temp = new Integer[listToSort.length];
             bogo(listToSort, temp);
         }
     }
@@ -22,9 +22,9 @@ public class BogoSort extends Sorter {
         return "Bogo Sort";
     }
 
-    private void bogo(Comparable[] listToSort, Comparable[] temp) {
+    private void bogo(Comparable<Integer>[] listToSort, Comparable<Integer>[] temp) {
         temp = listToSort.clone();
-        List<Comparable> list = Arrays.asList(temp);
+        List<Comparable<Integer>> list = Arrays.asList(temp);
         while (!isSorted(list)) {
             Collections.shuffle(list);
         }

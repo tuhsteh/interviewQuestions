@@ -2,8 +2,8 @@ package com.qatommy.interview.sort;
 
 public class MergeSort extends Sorter {
     @Override
-    public void sort(Comparable[] listToSort) {
-        Comparable[] temp = new Comparable[listToSort.length];
+    public void sort(Comparable<Integer>[] listToSort) {
+        Comparable<Integer>[] temp = new Integer[listToSort.length];
         mergeSort(listToSort, temp, 0, listToSort.length - 1);
     }
 
@@ -12,7 +12,7 @@ public class MergeSort extends Sorter {
         return "Merge sort";
     }
 
-    private void mergeSort(Comparable[] listToSort, Comparable[] temp, int left, int right) {
+    private void mergeSort(Comparable<Integer>[] listToSort, Comparable<Integer>[] temp, int left, int right) {
         if (left < right) {
             int center = (left + right) / 2;
             mergeSort(listToSort, temp, left, center);
@@ -21,13 +21,13 @@ public class MergeSort extends Sorter {
         }
     }
 
-    private void merge(Comparable[] listToSort, Comparable[] temp, int leftPos, int rightPos, int rightEnd) {
+    private void merge(Comparable<Integer>[] listToSort, Comparable<Integer>[] temp, int leftPos, int rightPos, int rightEnd) {
         int leftEnd = rightPos - 1;
         int tempPos = leftPos;
         int numElements = rightEnd - leftPos + 1;
 
         while (leftPos <= leftEnd && rightPos <= rightEnd) {
-            if (listToSort[leftPos].compareTo(listToSort[rightPos]) <= 0)
+            if (listToSort[leftPos].compareTo((Integer) listToSort[rightPos]) <= 0)
                 temp[tempPos++] = listToSort[leftPos++];
             else
                 temp[tempPos++] = listToSort[rightPos++];

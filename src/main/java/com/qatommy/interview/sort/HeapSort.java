@@ -2,7 +2,7 @@ package com.qatommy.interview.sort;
 
 public class HeapSort extends Sorter {
     @Override
-    public void sort(Comparable[] listToSort) {
+    public void sort(Comparable<Integer>[] listToSort) {
         for (int i = listToSort.length / 2; i >= 0; i--)  /* buildHeap */
             percDown(listToSort, i, listToSort.length);
         for (int i = listToSort.length - 1; i > 0; i--) {
@@ -34,15 +34,15 @@ public class HeapSort extends Sorter {
      * @index i the position from which to percolate down.
      * @int n the logical size of the binary heap.
      */
-    private static void percDown(Comparable[] a, int i, int n) {
+    private static void percDown(Comparable<Integer>[] a, int i, int n) {
         int child;
-        Comparable tmp;
+        Comparable<Integer> tmp;
 
         for (tmp = a[i]; leftChild(i) < n; i = child) {
             child = leftChild(i);
-            if (child != n - 1 && a[child].compareTo(a[child + 1]) < 0)
+            if (child != n - 1 && a[child].compareTo((Integer) a[child + 1]) < 0)
                 child++;
-            if (tmp.compareTo(a[child]) < 0)
+            if (tmp.compareTo((Integer) a[child]) < 0)
                 a[i] = a[child];
             else
                 break;

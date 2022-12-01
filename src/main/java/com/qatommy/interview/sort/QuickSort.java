@@ -3,7 +3,7 @@ package com.qatommy.interview.sort;
 public class QuickSort extends Sorter {
 
     @Override
-    public void sort(Comparable[] listToSort) {
+    public void sort(Comparable<Integer>[] listToSort) {
         quicksort(listToSort, 0, listToSort.length - 1);
     }
 
@@ -22,29 +22,29 @@ public class QuickSort extends Sorter {
      * @param low  the left-most index of the subarray.
      * @param high the right-most index of the subarray.
      */
-    private static void quicksort(Comparable[] a, int low, int high) {
+    private static void quicksort(Comparable<Integer>[] a, int low, int high) {
         if (low + CUTOFF > high) {
             insertionSort(a, low, high);
         } else {
             // Sort low, middle, high
             int middle = (low + high) / 2;
-            if (a[middle].compareTo(a[low]) < 0)
+            if (a[middle].compareTo((Integer) a[low]) < 0)
                 swapReferences(a, low, middle);
-            if (a[high].compareTo(a[low]) < 0)
+            if (a[high].compareTo((Integer) a[low]) < 0)
                 swapReferences(a, low, high);
-            if (a[high].compareTo(a[middle]) < 0)
+            if (a[high].compareTo((Integer) a[middle]) < 0)
                 swapReferences(a, middle, high);
 
             // Place pivot at position high - 1
             swapReferences(a, middle, high - 1);
-            Comparable pivot = a[high - 1];
+            Comparable<Integer> pivot = a[high - 1];
 
             // Begin partitioning
             int i, j;
             for (i = low, j = high - 1; ; ) {
-                while (a[++i].compareTo(pivot) < 0)
+                while (a[++i].compareTo((Integer) pivot) < 0)
                     ;
-                while (pivot.compareTo(a[--j]) < 0)
+                while (pivot.compareTo((Integer) a[--j]) < 0)
                     ;
                 if (i >= j)
                     break;
@@ -81,12 +81,12 @@ public class QuickSort extends Sorter {
      * @param low   the left-most index of the subarray.
      * @param high  the number of items to sort.
      */
-    private static void insertionSort(Comparable[] a, int low, int high) {
+    private static void insertionSort(Comparable<Integer>[] a, int low, int high) {
         for (int p = low + 1; p <= high; p++) {
-            Comparable tmp = a[p];
+            Comparable<Integer> tmp = a[p];
             int j;
 
-            for (j = p; j > low && tmp.compareTo(a[j - 1]) < 0; j--)
+            for (j = p; j > low && tmp.compareTo((Integer) a[j - 1]) < 0; j--)
                 a[j] = a[j - 1];
             a[j] = tmp;
         }
