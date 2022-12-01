@@ -22,12 +22,6 @@ public class LifeCycleOrderingTests {
         logger.info("Class Construction");
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-        logger.info("Done with class");
-    }
-
     private static Logger logger = LogManager.getLogger(LifeCycleOrderingTests.class.getSimpleName());
     private static String staticValue;
     private String testValue = "initial";

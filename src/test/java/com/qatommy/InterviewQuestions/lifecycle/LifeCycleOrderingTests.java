@@ -20,12 +20,6 @@ public class LifeCycleOrderingTests {
         logger.info("Class Construction");
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-        logger.info("Done with class");
-    }
-
     @ClassRule
     public static TestWatcher watcher = new TestWatcher() {
         @Override

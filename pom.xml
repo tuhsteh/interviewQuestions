@@ -39,7 +39,7 @@
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
-                    <compilerArgument>-Xlint:unchecked</compilerArgument>
+                    <compilerArgument>-Xlint:deprecation</compilerArgument>
                     <target>${target}</target>
                     <source>${target}</source>
                 </configuration>

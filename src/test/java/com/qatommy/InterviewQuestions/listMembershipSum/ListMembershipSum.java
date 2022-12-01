@@ -24,7 +24,7 @@ public class ListMembershipSum {
 			add(5);
 			add(2);
 		}};
-		assertEquals(new Integer(6), getListMembershipSum(testArray1));
+		assertEquals(Integer.valueOf(6), getListMembershipSum(testArray1));
 
 		List<Integer> testArray2 = new ArrayList<Integer>() {{
 			add(1);
@@ -33,7 +33,7 @@ public class ListMembershipSum {
 			add(5);
 			add(1);
 		}};
-		assertEquals(new Integer(3), getListMembershipSum(testArray2));
+		assertEquals(Integer.valueOf(3), getListMembershipSum(testArray2));
 	}
 
 	public Integer getListMembershipSum(List<Integer> list) {
