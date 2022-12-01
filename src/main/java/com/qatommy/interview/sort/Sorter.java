@@ -24,11 +24,11 @@ public abstract class Sorter {
     }
 
     public void printArray(Comparable<Integer>[] a) {
-        final int lineLength = 20;
+        final int lineLength = 10;
         for (int i = 0; i < a.length; i++) {
+            if (i != 0 && i % lineLength == 0) System.out.println("");
             System.out.print(a[i] + ", ");
-            if (i != 0 && 1 % lineLength == 0) System.out.println("");
-            if (i > 20) {
+            if (i > 25) {
                 System.out.println("...");
                 break;
             }
