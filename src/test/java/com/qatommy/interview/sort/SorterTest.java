@@ -50,8 +50,8 @@ public class SorterTest {
     List<? extends Sorter> sorters = Arrays.asList(
             new MergeSort(),
             new HeapSort(),
-//            new BogoSort(),
-//            new InsertionSort(),
+            new BogoSort(),
+            new InsertionSort(),
             new QuickSort()
     );
 

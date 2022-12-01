@@ -9,6 +9,7 @@ public class BogoSort extends Sorter {
     public void sort(Comparable<Integer>[] listToSort) {
         if (listToSort.length > 10) {
             System.out.println("You'd better not sort anything this big with a bogo sort.  Who knows when it will finish!?");
+            System.out.println("We'll assume you meant to do a HeapSort() instead.");
             Sorter s = new HeapSort();
             s.sort(listToSort);
         } else {
