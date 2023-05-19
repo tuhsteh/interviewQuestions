@@ -15,12 +15,13 @@
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <guava.version>31.0.1-jre</guava.version>
         <hamcrest.version>2.2</hamcrest.version>
-        <junit.version>4.13.1</junit.version>
-        <log4j.version>2.17.1</log4j.version>
-        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
-        <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
+        <junit.version>4.13.2</junit.version>
+        <log4j.version>2.20.0</log4j.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+        <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
 
-        <target>1.8</target>
+        <target>11</target>
     </properties>
 
     <build>
@@ -32,6 +33,11 @@
                 <configuration>
                     <argLine>-Xms256m -Xmx4096m</argLine>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
