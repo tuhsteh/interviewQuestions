@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/yarn,java,maven,macos,node
-# Edit at https://www.toptal.com/developers/gitignore?templates=yarn,java,maven,macos,node
+# Created by https://www.toptal.com/developers/gitignore/api/yarn,java,maven,macos,node,vscode
+# Edit at https://www.toptal.com/developers/gitignore?templates=yarn,java,maven,macos,node,vscode
 
 ### Java ###
 # Compiled class file
@@ -201,6 +201,7 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+.vscode
 
 # yarn v2
 .yarn/cache
@@ -217,6 +218,8 @@ dist
 
 # SvelteKit build / generate output
 .svelte-kit
+
+#!! ERROR: vscode is undefined. Use list command to see defined gitignore types !!#
 
 ### yarn ###
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
@@ -235,4 +238,4 @@ dist
 # and uncomment the following lines
 # .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/yarn,java,maven,macos,node
+# End of https://www.toptal.com/developers/gitignore/api/yarn,java,maven,macos,node,vscode
