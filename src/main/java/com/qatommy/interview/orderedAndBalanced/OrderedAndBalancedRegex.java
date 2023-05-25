@@ -31,51 +31,6 @@ public class OrderedAndBalancedRegex {
         Pattern p = Pattern.compile("");
         Matcher m = p.matcher("");
 
-        List<Character> stack = new ArrayList<Character>();
-        System.out.println("Str:  " + str);
-        for (int i = 0; i < str.length(); i++) {
-            System.out.println("Stack: " + stack);
-            if (str.charAt(i) == '(') {// opening a paren pair.
-                System.out.println("Stack: " + stack);
-                stack.add('(');
-            }
-            if (str.charAt(i) == '[') {// opening a brace pair.
-                System.out.println("Stack: " + stack);
-                stack.add('[');
-            }
-            if (str.charAt(i) == ']' && i == 0) {
-                System.out.println("Stack: " + stack);
-                System.out.println("Missing opening square brace");
-                return false;
-            }
-            if (str.charAt(i) == ')' && i == 0) {
-                System.out.println("Missing opening paren");
-                return false;
-            }
-            if (str.charAt(i) == ']') {
-                System.out.println("Stack: " + stack);
-                if (stack.get(stack.size() - 1) != '[') {
-                    System.out.println("Unbalanced square braces");
-                    return false;
-                } else {
-                    stack.remove(stack.size() - 1);
-                }
-            }
-            if (str.charAt(i) == ')') {
-                System.out.println("Stack: " + stack);
-                if (stack.get(stack.size() - 1) != '(') {
-                    System.out.println("Unbalanced parentheses");
-                    return false;
-                } else {
-                    stack.remove(stack.size() - 1);
-                }
-            }
-        }
-        if (stack.size() != 0) {
-            System.out.println("Not balanced.");
-            return false;
-        }
-
-        return true;
+        return false;
     }
 }
