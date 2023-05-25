@@ -1,5 +1,5 @@
 # interviewQuestions
-Contains programming solutions to a variety of interview questions, as well as some experiments.
+Contains programming solutions to a variety of interview questions, as well as some experiments.  Many though not all of these are my own answers (Factorial, Fibonacci, isPrime, orderedAndBalanced, and a few others), and code I wrote to solve them.  The sorting algorithms are definitely not mine, nor the tree traversals.
 
 Over the years, whenever I would participate in interviewing a candidate for SDET or for a Java Developer position, 
 I got into the habit of saving their answers, or at least the algorithms.  This way I could:
