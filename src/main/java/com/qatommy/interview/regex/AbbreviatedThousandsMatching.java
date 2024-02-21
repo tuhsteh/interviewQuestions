@@ -15,7 +15,7 @@ public class AbbreviatedThousandsMatching {
 		logger.info("ReadNumberFromString:  " + str);
 		final String input = str.toLowerCase(Locale.getDefault());
 		logger.info("toLowerCase:  " + input);
-		Pattern p = Pattern.compile("([\\-0-9.]+)([km]$)");
+		Pattern p = Pattern.compile("([\\-0-9.]+)([km])$");
 		Matcher m = p.matcher(input);
 		Double result = 0.0;
 		if (m.find()) {
